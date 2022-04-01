@@ -4,6 +4,18 @@
     }
 }
 
-@media (min-width: 950px) and (max-width: 1070px) {
-    
+@media (max-width: 1040px) {
+    .grid-win {
+        display: none !important;
+    }
+    .grid-404 {
+        display: block !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-404-text {
+        font-size: 50px;
+        color: #888;
+    }
 }
