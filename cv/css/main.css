@@ -147,8 +147,8 @@ body {
 
 
 .header__sub-picture {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    /* max-height: 200px; */
     position: relative;
 }
 
@@ -312,7 +312,7 @@ body {
 
 .projects-item-title-grid {
     min-width: 100px;
-    height: 40px;
+    /* height: 40px; */
     position: relative;
     display: flex;
     margin-left: 20px;
@@ -329,7 +329,7 @@ body {
 
 .projects-item-title-grid-item {
     border: 1px solid #888;
-    min-width: 300px;
+    /* min-width: 300px; */
     line-height: 40px;
     padding-left: 20px;
     padding-right: 20px;
