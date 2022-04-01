@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="../cv/font/fontawesome-free-6.0.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+    <link rel="shortcut icon" href="./assets/img/logo/241135365_1738090576581590_435169529872204044_n (2).jpg">
+    <title>HB-Shop</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="main_register">
+            <div class="register-header">
+                <div class="register-header-general">
+                    <span class="register-header-login">Đăng nhập</span>
+                </div>
+                <div class="register-header-general click_item-form-header">
+                    <span class="register-header-register">Đăng kí</span>
+                </div>
+            </div>
+            <div class="main__register-list">
+                <div class="main_register-auth">
+                    <input placeholder="Email hoặc số điện thoại" type="text">
+                    <input placeholder="Mật khẩu" type="text">
+                    <input placeholder="Nhập lại mật khẩu" type="text">
+                    <span class="main_register-auth-policy">
+                        Bằng việc đăng kí  bạn đồng ý với HB-shop về
+                        <a class="home-product-tab" href="">Điều khoản dịch vụ</a> &
+                        <a href="">Chính sách bảo mật</a>
+                    </span>
+                    <div class="main_register-auth-close_or_up">
+                        <button class="auth_btn-register">ĐĂNG KÍ</button>
+                        <button class="auth_btn-close">TRỞ LẠI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="register-footer">
+                <button class="btn_connect-facebook">
+                    <i class="fab fa-facebook-square"></i>
+                    Kết nối với Facebook</button>
+                <button class="btn_connect-google">
+                    <i class="fab fa-google"></i>
+                    Kết nối với Google</button>
+            </div>
+        </div>
+        <div class="main_login"  style="display: none">
+            <div class="register-header">
+                <div class="register-header-general click_item-form-header">
+                    <span class="register-header-login">Đăng Kí</span>
+                </div>
+                <div class="register-header-general">
+                    <span class="register-header-register">Đăng Nhập</span>
+                </div>
+            </div>
+            <div class="main__register-list">
+                <div class="main_register-auth">
+                    <input placeholder="Email hoặc số điện thoại" type="text">
+                    <input placeholder="Mật khẩu" type="text">
+                    <div class="forget_pass">
+                        <a style="text-decoration: none;" href="">Quên mật khẩu?</a>
+                    </div>
+                    <div class="main_register-auth-close_or_up">
+                        <button class="auth_btn-register">ĐĂNG NHẬP</button>
+                        <button class="auth_btn-close">TRỞ LẠI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="register-footer">
+                <button class="btn_connect-facebook">
+                    <i class="fab fa-facebook-square"></i>
+                    Kết nối với Facebook</button>
+                <button class="btn_connect-google">
+                    <i class="fab fa-google"></i>
+                    Kết nối với Google</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunctionrgt() {
+            modal.classList.toggle('bao')
+        }
+    </script>
+    <div class="app">
+        <header class="header">
+            <nav class="navbar">
+                <ul class="navbar_list navbar_left">
+                    <li class="navbar_list-general general_back"><a class="navbar_item-tab" href="">Kênh người bán</a></li>
+                    <li class="navbar_list-general general_back"><a class="navbar_item-tab" href="">Trở thành người bán HB-Shop</a></li>
+                    <li class="navbar_list-general qr general_back">
+                        <a class="navbar_item-tab qr_container" href="">Tải ứng dụng</a>
+                        <div class="qr_list">
+                            <img src="./assets/img/qr-shopee/d91264e165ed6facc6178994d5afae79.png" alt="">
+                            <div class="list_social">
+                                <div class="list_social-item">
+                                    <i class="fab fa-app-store-ios"></i>
+                                    <span>App Store</span>
+                                </div>
+                                <div class="list_social-item">
+                                    <i class="fab fa-google-play"></i>
+                                    <span>Google PLay</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar_list-general">
+                        <span class="item_text">Kết nối</span>
+                    </li>
+                    <li class="navbar_list-general">
+                        <a href=""><i class="fab fa-facebook navbar_item-tab"></i></a>
+                    </li>
+                    <li class="navbar_list-general">
+                        <a href=""><i class="fab fa-instagram navbar_item-tab"></i></a>
+                    </li>
+                </ul>
+                <ul class="navbar_list navbar_right">
+                    <li class="navbar_list-general notify">
+                        <span class="item_text"><i class="fas fa-bell"></i>Thông báo</span>
+                        <div class="notify_list">
+                            <div class="notify_list-item-header">
+                                <span>Thông báo mới nhận</span>
+                            </div>
+                            <div>
+                                <a href="" class="notify_list-item notify_item-unread">
+                                    <div class="notify_list-item-img" style="margin: auto;">
+                                        <img src="./assets/img/notify/anime-girl-1440559-wallhere.com.jpg" alt="">
+                                    </div>
+                                    <div class="notify_list-item-text">
+                                        <div>
+                                            <span class="notify_list-item-text-main">Xác thực nguồn gốc chính hãng của các sản phẩm HBĐT</span>
+                                        </div>
+                                        <div style="margin-top: 6px;">
+                                            <span class="notify_list-item-text-note">Nguyễn Hoàng Bảo là giải pháp xác thực hàng chính hãng bằng công nghệ tiên tiến nhất hiện nay.</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="notify_list-item notify_item-unread">
+                                    <div class="notify_list-item-img" style="margin: auto;">
+                                        <img src="./assets/img/notify/anime-girl-1440559-wallhere.com.jpg" alt="">
+                                    </div>
+                                    <div class="notify_list-item-text">
+                                        <div>
+                                            <span class="notify_list-item-text-main">Xác thực nguồn gốc chính hãng của các sản phẩm HBĐT</span>
+                                        </div>
+                                        <div style="margin-top: 6px;">
+                                            <span class="notify_list-item-text-note">Nguyễn Hoàng Bảo là giải pháp xác thực hàng chính hãng bằng công nghệ tiên tiến nhất hiện nay.</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="notify_list-item notify_item-read">
+                                    <div class="notify_list-item-img" style="margin: auto;">
+                                        <img src="./assets/img/notify/anime-girl-1440559-wallhere.com.jpg" alt="">
+                                    </div>
+                                    <div class="notify_list-item-text">
+                                        <div>
+                                            <span class="notify_list-item-text-main">Xác thực nguồn gốc chính hãng của các sản phẩm HBĐT</span>
+                                        </div>
+                                        <div style="margin-top: 6px;">
+                                            <span class="notify_list-item-text-note">Nguyễn Hoàng Bảo là giải pháp xác thực hàng chính hãng bằng công nghệ tiên tiến nhất hiện nay.</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="footer_item-all">
+                                <a href="" style="text-decoration: none;">
+                                    <div class="notify_item-all">
+                                        <span>Xem tất cả</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar_list-general">
+                        <a class="navbar_item-tab reponsive-610" href=""><i class="fas fa-question-circle"></i>Hỗ trợ</a>
+                    </li>
+                    <li class="navbar_list-general" style="padding: 0 10px;">
+                        <span class="item_text reponsive-610"><i class="fas fa-globe"></i>Tiếng Việt<i class="fas fa-chevron-down"></i></span>
+
+                    </li>
+                    <li onclick="myFunctionrgt()" id="navbar_register" class="navbar_list-general general_back">
+                        <span class="item_text">Đăng kí</span>
+                    </li>
+                    <li id="navbar_login" class="navbar_list-general">
+                        <span class="item_text">Đăng nhập</span>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navbar_down">
+                <div class="navbar_down-iconlogo navbar_down-back">
+                    <a style="text-decoration: none;" href="">
+                        <i class="fas fa-store navbar_down-logo"></i>
+                        <span class="navbar_down-brand">HB-Shop</span>
+                    </a>
+                </div>
+                <div class="navbar_down-sub">
+                    <div class="navbar_down-sub-crown-btn">
+                        <input  class="navbar_down-sub-crown-search" placeholder="Tìm sản phẩm thương hiệu và tên shop" type="text" >
+                        <div class="crown-history-subnav">
+                            <div class="navbar_down-sub-crown-history">
+                                <div class="history_item-header-search">
+                                    <span>Lịch sử tìm kiếm</span>
+                                </div>
+                                <div class="history_item-nav-search">
+                                    <a href="https://translate.google.com/?sl=vi&tl=en&text=bao%20quanh&op=translate">Dầu ăn</a>
+                                </div>
+                                <div class="history_item-nav-search">
+                                    <a href="#">Trứng gà nướng</a>
+                                </div>
+                                <div class="history_item-nav-search">
+                                    <a href="#">Bánh trán trộn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar_down-sub-option">
+                        <div class="navbar_down-sub-option-choose">
+                            <span class="navbar_down-sub-option-1">Trong shop</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="navbar_down-sub-option-nav">
+                            <div class="navbar_down-sub-option-nav-general list_option-1 choose-list-option">
+                                <span>Trong shop</span>
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="navbar_down-sub-option-nav-general list_option-2">
+                                <span>Ngoài shop</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="navbar_down-sub-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="navbar_down-card navbar_down-back">
+                    <div class="navbar_down-back-tab">
+                        <a style="text-decoration: none;" href="">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <div class="navbar_down-card-subnav">
+                        <div class="navbar_down-card-subnav-list">
+                            <div class="navbar_down-card-subnav-icontext">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="fas fa-list category__heading-icon"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="" class="category-item_link">Trang điểm mặt</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item_link">Trang điểm môi</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item_link">Trang điểm mắt</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item_link">Mỹ phẩm</a>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter_btn btn">Phổ biến</button>
+                            <button class="home-filter_btn btn btn--primery">Mới nhất</button>
+                            <button class="home-filter_btn btn">Bán chạy</button>
+                            <div class="select-input">
+                                <div class="select-input__hoverlist">
+                                    <span class="select-input_general select-input__lebel">Giá</span>
+                                    <i class="select-input_general fas fa-chevron-down"></i>
+                                </div>
+                                <ul class="select-input__navlist">
+                                    <li class="select-input__navlist-general">Giá thấp đến cao</li>
+                                    <li class="select-input__navlist-general">Giá cao đến thấp</li>
+                                </ul>
+                            </div>
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>
+                                    <span>/</span>
+                                    <span>14</span>
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a class="home-filter__page-btn" href="">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                    <a class="home-filter__page-btn" href="">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-product">
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/5f58d89527105ce7dba1c4cf58d6e5f0_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/b5d618516a9db2b3de425289b8d45fd3_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/e56e952507843e3d5fb06a41c1581d9c_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/4c7d45a2fe40a0f367672111a07199d1_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/5416022a7a8b51db37618ca0b3e44972_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/a47583cd1740b69fd6d2a4e9c240d6df_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/e1b741e996c355919526daecf7216935_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/d8fe93960d1a72c0d25d9709a2da6e4b_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/b0b10591e171687fac7900635c58cf56_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7a7e940415ab5fa2e43c264fbdc3aed2_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/14faec125982543ebc4ff2eef61584ff_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/db5ec36f1ea4c95f879b8d3cd29308c8_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/96ecdf2d4775e960020952c429667faf_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/b83a4bede9ef23a90c88531fc531b9f9_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/3a5f2f8b397ada6ba12953075973ecee_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/a78a260fe125ba7cacb08b75904594a7_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/de43d01a292dc806fdd68854a44e19fb_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/a33d6ac4ee5f0835e2ce4eaad69f0407_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/73b7edcf407caa2e3ba6716c151f9d76_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/10e6620fe4db4f26b595efc4fe00b38b_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f3e5becf0f3704a8e8e87fc795358b6e_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/d3fa3197e4f7185627289e2b3e637361_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/5c45bc59103a4fbac33ef3ed17f0d4d0_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/da6ea8d20a258e02dbb3859a0c952d4a_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/23908d6105c5a3f72ce01b42376ba1e6_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/89cdbab8074581fc2bc1db43cd30f402_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/ff92ac298b013dd722bb4246529b5f7e_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/9d6763d0b1d69d49df7bf793452468b4_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/8a3d27b647ea56cf48b37e04ce4c44c6_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/4e01fc0b4bfa9487c77fb055b49ebdcc_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/bba6a1cf711682e01a756a0f403719b1_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/3a7e07447c110501b347837ffcd8c938_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f3e5becf0f3704a8e8e87fc795358b6e_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/54522c7eaac284ae2e53b05080663fac_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <a class="home-product-tab" href="">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item-find_product reponsive-572">
+                                            <span class="home-product-item-find_product-text">Tìm sản phẩm tương tự</span>
+                                        </div>
+                                        <span class="home-product-item-favorite">Yêu thích</span>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-production">48%</span>
+                                            <span class="home-product-item__sale-text">Giảm</span>
+                                        </div>
+                                        <div  class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/b75a4a40562c37450a5fe66c3b91acfe_tn)"></div>
+                                        <h3 class="home-product-item__label">Set đường trắng Whoo đông y hoàng cung Gong Yang siêu cấp ngon lành</h3>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-before">12.300.000đ</span>
+                                            <span class="home-product-item__price-after">11.070.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__icon">
+                                            <div class="home-product-item__icon-like">
+                                                <!-- <i class="far fa-heart home-product-icon-hear-like"></i> -->
+                                                <i class="fas fa-heart home-product-icon-hear-liked"></i>
+                                            </div>
+                                            <div class="home-product-item__icon-rating">
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star star-rating-icon"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="home-product-item__made">
+                                            <span>Whoo</span>
+                                            <span>Nhật Bản</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="home-pagination">
+                            <div class="home-pagination-item">
+                                <a class="pagination-item-link home-pagination-item-link-icon can-not-choose" href="">
+                                    <i class="fas fa-chevron-left"></i> 
+                                </a>
+                            </div>
+                            <ul class="home-pagination-list">
+                                <a class="pagination-item-link home-item-tab-choose" href="">1</a>
+                                <a class="pagination-item-link home-item-tab-done-choose" href="">2</a>
+                                <a class="pagination-item-link home-item-tab-done-choose" href="">3</a>
+                                <a class="pagination-item-link home-item-tab-done-choose" href="">4</a>
+                                <a class="pagination-item-link home-item-tab-done-choose" href="">5</a>
+                                <a class="pagination-item-link home-item-tab-done-choose" href="">...</a>
+                                <a class="pagination-item-link home-item-tab-done-choose" href="">14</a>
+                            </ul>
+                            <div class="home-pagination-item">
+                                <a class="pagination-item-link home-pagination-item-link-icon" href="">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="grid">
+            <div class="grid__row reponsive-790">
+                <ul class="grid__column-1-2">
+                    <span class="footer__list-item-head">Chăm sóc khách hàng</span>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Trung tâm trợ giúp</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">HB-Shop Blog</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">HB-Shop Mall</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Hướng Dẫn Mua Hàng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Hướng Dẫn Bán Hàng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Thanh Toán</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">HB-Shop Xu</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Vận Chuyển</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Trả Hàng & Hoàn Tiền</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Chăm Sóc Khách Hàng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Chính Sách Bảo Hành</a></li>
+                </ul>
+                <ul class="grid__column-1-2">
+                    <span class="footer__list-item-head">VỀ SHOPEE</span>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Giới Thiệu Về HB-Shop Việt Nam</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Tuyển Dụng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Điều Khoản HB-Shop</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Chính Sách Bảo Mật</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Chính Hãng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Kênh Người Bán</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Flash Sales</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Chương Trình Tiếp Thị Liên Kết HB-Shop</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Liên Hệ Với Truyền Thông</a></li>
+                </ul>
+                <ul class="grid__column-1-2">
+                    <span class="footer__list-item-head">Chăm sóc khách hàng</span>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Trung tâm trợ giúp</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">HB-Shop Blog</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">HB-Shop Mall</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Hướng Dẫn Mua Hàng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Hướng Dẫn Bán Hàng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Thanh Toán</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">HB-Shop Xu</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Vận Chuyển</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Trả Hàng & Hoàn Tiền</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Chăm Sóc Khách Hàng</a></li>
+                    <li class="footer__list-item"><a class="footer__list-item-link" href="">Chính Sách Bảo Hành</a></li>
+                </ul>
+                <ul class="grid__column-1-2">
+                    <span class="footer__list-item-head">Theo dõi chúng tôi trên</span>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="">
+                            <i class="fab fa-facebook footer__list-item-link-icon"></i>
+                            <span class="footer__list-item-text">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="">
+                            <i class="fab fa-instagram footer__list-item-link-icon"></i>
+                            <span class="footer__list-item-text">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="">
+                            <i class="fab fa-linkedin footer__list-item-link-icon"></i>
+                            <span class="footer__list-item-text">LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="grid__column-1-2 reponsive-1150">
+                    <span class="footer__list-item-head">Tải ứng dụng HB-Shop trên</span>
+                    <div class="footer-social">
+                        <img class="footer-social-item-img" src="./assets/img/qr-shopee/d91264e165ed6facc6178994d5afae79.png" alt="">
+                        <div class="footer__social-list">
+                            <a class="footer__social-list-item-tab" href="">
+                                <img class="footer__social-list-item-tab-img" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/39f189e19764dab688d3850742f13718.png" alt="App Store">
+                            </a>
+                            <a class="footer__social-list-item-tab" href="">
+                                <img class="footer__social-list-item-tab-img" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/f4f5426ce757aea491dce94201560583.png" alt="Play Store">
+                            </a>
+                            <a class="footer__social-list-item-tab" href="">
+                                <img class="footer__social-list-item-tab-img" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/1ae215920a31f2fc75b00d4ee9ae8551.png" alt="App Gallery">
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer__container reponsive-388>
+                <span class="footer__container-access">© 2022 HB-Shop. Tất cả các quyền được bảo lưu.</span>
+                <ul class="footer__container-list">
+                    <span class="footer__made-nation">Quốc gia & Khu vực:</span>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Singapore</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Indonesia</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Đài Loan</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Malaysia</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Việt Nam</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Philippines</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Brazil</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Mexico</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Columbia</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Chileccc</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Poland</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">Spain</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">France</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link sign-back" href="">India</a>
+                    </div>
+                    <div class="footer__made-nation-item">
+                        <a class="footer__made-nation-item-link" href="">Argentina</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom-grid">
+            <div class="grid">
+                <div class="footer__bottom">
+                    <div class="footer__bottom-item">
+                        <span class="footer__bottom-item-text">Chính sách bảo mật</span>
+                        <span class="footer__bottom-item-text">Quy chế hoạt động</span>
+                        <span class="footer__bottom-item-text">Chính sách vận chuyển</span>
+                        <span class="footer__bottom-item-text">Chính sách trả hàng và hoàn tiền</span>
+                    </div>
+                    <div class="footer__bottom-item">
+                        <a class="footer__bottom-item-link" href="">
+                            <img class="footer__bottom-item-link-img" src="./assets/img/img-footer/20150827110756-dadangky.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer__bottom-item">
+                        <span class="footer__bottom-item-text">Công ty TNHH Shopee</span>
+                    </div>
+                    <div class="footer__bottom-item">
+                        <span class="footer__bottom-item-text">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.HB-Shop.vn</span>
+                    </div>
+                    <div class="footer__bottom-item">
+                        <span class="footer__bottom-item-text">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)</span>
+                    </div>
+                    <div class="footer__bottom-item">
+                        <span class="footer__bottom-item-text">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</span>
+                    </div>
+                    <div class="footer__bottom-item">
+                        <span class="footer__bottom-item-text">© 2015 - Bản quyền thuộc về Công ty TNHH HB-Shop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

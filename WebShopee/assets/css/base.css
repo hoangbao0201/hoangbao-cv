@@ -1,0 +1,149 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #f5a49d;
+    --border-color-back: #f9745c;
+    --opacity-color: #ccc;
+    --opacity-text-color: rgb(165, 165, 165);
+    --notify-hover-color: #f8f8f8;
+    --notify-read-color: #fff;
+    --notify-unread-color: #fff1efc2;
+    --sale--color: rgb(255, 211, 36);
+    --primary-color: #ee4d2d;
+}
+*{
+    box-sizing: inherit;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* cna-not-choose */
+
+.can-not-choose {
+    color: var(--opacity-color) !important;
+    cursor: default;
+}
+
+/* home-panigation */
+
+.pagination-item-link {
+    text-decoration: none;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    margin: 0 20px;
+    display: block;
+}
+
+/* btn */
+
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    background-color: var(--white-color);
+}
+
+.btn--primery {
+    background-color: #d82409;
+    color: var(--white-color);
+}
+
+/* responsive */
+
+.grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+} 
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: -5px;
+    margin-right: -5px; */
+
+}
+
+/* test */
+
+.grid__column-2 {
+    width: 16.6667%;
+}
+
+.grid__column-1-2 {
+    width: 20%;
+    list-style: none;
+    padding: 5px 5px;
+}
+
+.grid__column-10 {
+    width: 83.3334%;   
+}
+
+.home-product-item {
+}
+
+/* animation */
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes notify_growth{
+    from{
+        opacity: 1;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* click_item-form-header */
+
+.click_item-form-header{
+    background-color: var(--white-color);
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* select-input__lebel */
+
+.select-input {
+    height: 34px;
+    background-color: var(--white-color);
+    padding: 0 12px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ----------------------------- */

@@ -1,0 +1,27 @@
+:root{
+    --primary-color: rgb(69, 137, 102);
+}
+
+.content__main-overview {
+    position: relative;
+}
+
+.content__main-education {
+    position: relative;
+}
+
+.content__main-skill {
+    position: relative;
+}
+
+.content__main-language {
+    position: relative;
+}
+
+.content__main-careerobjective {
+    position: relative;
+}
+
+.content__main-projects {
+    position: relative;
+}

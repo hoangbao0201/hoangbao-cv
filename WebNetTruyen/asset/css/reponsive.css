@@ -1,0 +1,9 @@
+@media (min-width: 1071px) {
+    .content__center {
+        display: flex;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1070px) {
+    
+}

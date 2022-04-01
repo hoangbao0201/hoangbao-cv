@@ -1,0 +1,344 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.content {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eee;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content__grid {
+    margin-top: 50px;
+}
+
+.content__sub {
+    max-width: 850px;
+    height: 1202px;
+    background-color: #ffff;
+    padding: 20px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.content__sub-text {
+    color: #fff;
+} 
+
+.img_bg {
+    background: url(https://cv.fullstack.edu.vn/backgrounds/graph-dot-top-458966.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__sub-main {
+    width: 100%;
+    position: relative;
+    padding-right: 20px;
+}
+
+.header__sub-name {
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 8px 0px;
+    color: var(--primary-color);
+}
+
+/* down-cv---------------- */
+
+.sub-down-pdf {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.down_cv {
+    border: 1px solid #333;
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.down_cv:hover {
+    box-shadow: 0px 0px 3px #ccc;
+}
+
+.down_cv:active {
+    box-shadow: 0px 0px 3px #bbb;
+    opacity: 0.8;
+}
+
+.down_cv-icon {
+    color: #333;
+    font-size: 16px;
+}
+
+.down_cv-text {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+
+
+/* ------------------------ */
+
+.header__sub-service {
+    padding-bottom: 8px;
+    font-size: 20px;
+}
+
+.header__sub-list {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+}
+
+.header__sub-list-nav {
+    width: 50%;
+}
+
+.header__sub-list-title {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header__sub-list-heading {
+    min-width: 90px;
+    font-weight: 700;
+}
+
+.header__sub-list-title-text {
+}
+
+
+
+.header__sub-picture {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.header__sub-picture-main {
+    width: 100%;
+}
+
+
+/* overview------------------------------------- */
+
+.content__main {
+    width: 100%;
+}
+
+.content__overview-text {
+    list-style: none;
+    line-height: 25px;
+    padding: 15px 10px;
+
+}
+
+.content__main-heading {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.content__main-heading-box {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    position: relative;
+    display: flex;
+}
+
+.content__main-heading-box-icon {
+    width: 20px;
+    margin: auto;
+    color: #ffff;
+}
+
+.content__main-heading {
+    display: flex;
+    align-items: center;
+}
+
+.content__main-heading-title {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+/* overview----------------------------- */
+
+.content__main-sub-list {
+    padding-bottom: 10px;
+}
+
+.content__main-sub-list-show {
+    display: flex;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.content__main-sub-list-item_time {
+    font-size: 16px;
+    font-weight: 700;
+    width: 180px;
+}
+
+.content__main-sub-list-item_position-list {
+    padding-left: 20px;
+    padding-top: 5px;
+    line-height: 22px;
+    list-style: none;
+    position: relative;
+}
+
+.position-list::before {
+    content: "•";
+    position: absolute;
+    left: 0px;
+}
+
+/* language---------------------------------- */
+
+.menu-row-list {
+    list-style: none;
+    display: flex;
+    padding: 15px 10px;
+}
+
+.content__main-sub-list-menu-row {
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.menu-row-list-title {
+    font-size: 16px;
+    font-weight: 700;
+    width: 180px;
+}
+
+/* projects------------------------------ */
+
+.menu-row-list-text-link {
+    line-height: 20px;
+}
+
+.menu-row-list-project {
+    border: 1px solid #ccc;
+}
+
+/* skill----------------------------------*/
+
+.content__main-sub-list-menu-skill {
+    padding: 15px 10px;
+}
+
+.list-menu-skill-ul {
+    display: flex;
+    line-height: 30px;
+    /* margin-left: 180px; */
+}
+
+.list-menu-skill-ul-title {
+    width: 100px;
+    font-weight: 700;
+}
+
+/* project--------------------------------- */
+
+.content__main-project-sub {
+    padding-top: 15px;
+}
+
+.list-menu-projects-item::before {
+    content: "•";
+    position: absolute;
+    left: 0px;
+}
+
+.content__main-sub-list-menu-projects {
+    margin-top: 20px;
+}
+
+.list-menu-projects-item {
+    padding-left: 15px;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.list-menu-projects-item-title {
+}
+
+.projects-item-title-grid {
+    min-width: 100px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+}
+
+.projects-item-title-grid-item-name {
+    width: 300px;
+    line-height: 40px;
+    border: 1px solid #888;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 700;
+}
+
+.projects-item-title-grid-item {
+    border: 1px solid #888;
+    min-width: 300px;
+    line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pagination {
+    color: #333;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 5px 8px;
+}
